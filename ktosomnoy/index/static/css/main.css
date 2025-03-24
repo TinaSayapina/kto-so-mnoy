@@ -1,0 +1,44 @@
+body{
+    --bs-body-bg:#F9F8E6;
+
+}
+
+.main-header{
+    background: url(../img/park.png) no-repeat center center;
+    background-size: cover;
+}
+.main-header__text{
+    background: #F9F8E6;
+    opacity: 0.7;
+    border: 1px dashed;
+ }
+
+ .img-thumbnail{
+    height:300px;
+ }
+
+.form-signin {
+  max-width: 500px;
+  padding: 2rem;
+    background: #fff;
+    border-radius: 5%;
+}
+.form-signin input{
+background-color:transparent;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
