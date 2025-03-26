@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import login
+from django.contrib.auth import login,logout
 
 from .forms import RegForm
 from .models import Activity
@@ -43,3 +43,8 @@ class Register(View):
         else:
             messages.error(request, 'username or password not correct')
             return redirect('/register')
+
+# Log out
+def logout_view(request):
+    logout(request)
+    return redirect('/')

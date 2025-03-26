@@ -18,21 +18,41 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="/" class="nav-link px-2 text-secondary">Главная</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary">Features</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary">Pricing</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary">FAQs</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary">About</a></li>
         </ul>
+        {% if user.is_authenticated %}
         <div class="text-end">
-          <button type="button" class="btn btn-outline me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <span>Привет, {{ user.username }}</span>
+          <button type="button" class="btn btn-outline me-2"><a href="/logout">Выйти</a></button>
+          <a type="button" class="btn btn-warning" href="/profile">Личный кабинет</a>
         </div>
+        {% else %}
+        <div class="text-end">
+          <button type="button" class="btn btn-outline me-2"><a href="/accounts/login">Войти</a></button>
+          <a type="button" class="btn btn-warning" href="/register">Регистрация</a>
+        </div>
+        {% endif %}
+
       </div>
     </div>
   </header>
 <main>
-
+<section class="py-5 text-center main-header">
+    <div class="row py-lg-5 mx-0">
+      <div class="col-lg-6 col-md-8 mx-auto main-header__text">
+        <h1 class="fw-light">Сообщество для поиска единомышленников</h1>
+        <p class="lead">Тут вы можете найти попутчика или друга по схожим интересам. </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Искать друга</a>
+          <a href="#" class="btn btn-secondary my-2">Предложить движ</a>
+        </p>
+      </div>
+    </div>
+  </section>
   {% block content %}
   {% endblock %}
 
