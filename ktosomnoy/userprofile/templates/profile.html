@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block title %}
+Профиль пользователя
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Профайл пользователя {{ profile.user }}</h1>
+
+    <p>{{ profile.city }}</p>
+    <p>{{ profile.district }}</p>
+    <p>{{ profile.social }}</p>
+    <p>{{ profile.about }}</p>
+
+</div>
+
+
+
+{% endblock %}
