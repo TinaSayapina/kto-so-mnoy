@@ -48,3 +48,10 @@ class Register(View):
 def logout_view(request):
     logout(request)
     return redirect('/')
+
+def activity_page(request,pk):
+    activity = Activity.objects.get(id = pk)
+    context = {
+        'activity':activity
+    }
+    return render(request,'activity.html',context)

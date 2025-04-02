@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('index.urls')),
     path('userprofile/',include('userprofile.urls')),
-    path('activities/',include('activity.urls')),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('summernote/', include('django_summernote.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
